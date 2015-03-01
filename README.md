@@ -9,5 +9,9 @@ Using Gulp for handling SCSS, Javascript and Bower packages.
 
 ## Installation
 - Download the Kirby CMS and place the contents in the folder named `public/`.
-- Add `define(ENV, 'development');` to `public/index.php`
+- Add `define('ENV', 'development');` to `public/index.php`
 - Refer to CSS and JS files with `<?php echo FTMD::css('main'); ?>` (this would load: assets/styles/main.css in development)
+
+## Todo
+- Add deploy task
+- Use PHP via Gulp
