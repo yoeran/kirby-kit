@@ -1,2 +1,3 @@
-# kirby-kit
-Kirby CMS starter kit with Gulp
+# Kirby CMS Starter kit with Gulp
+
+
