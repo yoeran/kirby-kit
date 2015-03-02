@@ -17,5 +17,7 @@ Use `gulp serve` to build all assets and start watching the files.
 Use `gulp`  to only build all assets.
 
 ## Todo
+- Add `svgmin` and `imagemin` tasks
+- Generate custom modernizr build with `gulp-modernizr`
 - Add deploy task
 - Use PHP via Gulp
