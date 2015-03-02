@@ -19,8 +19,8 @@ livereload({
 var config = {
   styles: './source/styles/',
   scripts: './source/scripts/',
-  styles_dist: './kirby_cms/assets/styles/',
-  scripts_dist: './kirby_cms/assets/scripts/'
+  styles_dist: './public/assets/styles/',
+  scripts_dist: './public/assets/scripts/'
 };
 
 gulp.task('lint', function() {

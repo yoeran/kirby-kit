@@ -12,6 +12,10 @@ Using Gulp for handling SCSS, Javascript and Bower packages.
 - Add `define('ENV', 'development');` to `public/index.php`
 - Refer to CSS and JS files with `<?php echo FTMD::css('main'); ?>` (this would load: assets/styles/main.css in development)
 
+## Usage
+Use `gulp serve` to build all assets and start watching the files.
+Use `gulp`  to only build all assets.
+
 ## Todo
 - Add deploy task
 - Use PHP via Gulp
