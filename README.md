@@ -13,11 +13,20 @@ Using Gulp for handling SCSS, Javascript and Bower packages.
 - Refer to CSS and JS files with `<?php echo FTMD::css('main'); ?>` (this would load: assets/styles/main.css in development)
 
 ## Usage
-Use `gulp serve` to build all assets and start watching the files.
-Use `gulp`  to only build all assets.
+```bash
+  # Build all assets, connect to a PHP server and start watching the files.
+  $ gulp
+  
+  # Build the assets
+  $ gulp build
+  
+  # Deploy all files in `public/` to a specified directory (probably SSH). Uses rsync.
+  $ gulp deploy
+```
 
 ## Todo
 - Add `svgmin` and `imagemin` tasks
 - Generate custom modernizr build with `gulp-modernizr`
-- Add deploy task
-- Use PHP via Gulp
+- Break up Gulpfile into smaller files
+- Add a configuration file for Gulp
+- Add a download task to download Kirby CMS' `core` and `panel` into the project. (Could also serve as updater).
