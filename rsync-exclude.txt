@@ -1,0 +1,7 @@
+.DS_Store
+content/
+thumbs/
+site/accounts/
+site/cache/
+license.md
+readme.md

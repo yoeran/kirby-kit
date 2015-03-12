@@ -5,7 +5,8 @@ Using Gulp for handling SCSS, Javascript and Bower packages.
 #### Contents
 - Takes Bower packages into account
 - Lints and uglifies Javascript
-- Compiles SCSS and uses Autoprefixer
+- Compiles and autoprefixes SCSS
+- Generates a custom Modernizr build with gulp-modernizr
 
 ## Installation
 - Download the Kirby CMS and place the contents in the folder named `public/`.
@@ -13,11 +14,5 @@ Using Gulp for handling SCSS, Javascript and Bower packages.
 - Refer to CSS and JS files with `<?php echo FTMD::css('main'); ?>` (this would load: assets/styles/main.css in development)
 
 ## Usage
-Use `gulp serve` to build all assets and start watching the files.
-Use `gulp`  to only build all assets.
-
-## Todo
-- Add `svgmin` and `imagemin` tasks
-- Generate custom modernizr build with `gulp-modernizr`
-- Add deploy task
-- Use PHP via Gulp
+Use `gulp` to build all assets and start watching the files.
+Use `gulp deploy` to deploy your site with rsync to a server
