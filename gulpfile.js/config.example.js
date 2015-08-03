@@ -70,6 +70,18 @@ module.exports = {
     ]
   },
 
+  kirby: {
+    core: {
+      url: 'https://github.com/getkirby/kirby/archive/master.zip',
+      path: dist + 'kirby'
+    },
+
+    panel: {
+      url: 'https://github.com/getkirby/panel/archive/master.zip',
+      path: dist + 'panel'
+    }
+  },
+
   watch: {
     livereload: dist+'**/*.{css,js,html,php}',
     styles: src + 'styles/**/*.scss',
