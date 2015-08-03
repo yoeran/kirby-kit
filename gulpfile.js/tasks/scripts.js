@@ -1,4 +1,5 @@
 var gulp    = require('gulp');
+var plumber = require('gulp-plumber');
 var config  = require('../config').javascript;
 var rename  = require('gulp-rename');
 var uglify  = require('gulp-uglify');
@@ -9,6 +10,7 @@ var concat  = require('gulp-concat');
 //
 gulp.task('scripts', function(){
   return gulp.src( config.source )
+    .pipe( plumber() )
     // normal version
     .pipe( concat( config.name + '.js') )
     .pipe( gulp.dest( config.dest ) )

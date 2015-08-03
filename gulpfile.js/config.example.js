@@ -25,6 +25,10 @@ module.exports = {
     }
   },
 
+  jshint: {
+    source: src+'scripts/**/*.js'
+  },
+
   javascript: {
     name: 'main',
     source: src+'scripts/**/*.js',
