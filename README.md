@@ -25,3 +25,4 @@ Rename the `config.example.js` file to `config.js` and adjust settings if needed
 
 ## Todo
 - Add CLI help manual with `gulp-help`
+- Add kirby:prepare task to build kirby folders in `public/`
