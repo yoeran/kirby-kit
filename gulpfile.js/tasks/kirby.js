@@ -39,16 +39,17 @@ gulp.task('kirby:core:download', function(){
 });
 
 gulp.task('kirby:core:clear_public', function(cb){
-  del(config.core.path , cb);
+  return del(config.core.path );
 });
 
 gulp.task('kirby:core:move', function(){
+  console.log('move core');
   return gulp.src( coreTemp + '/kirby-master/*')
     .pipe( gulp.dest( config.core.path ) );
 });
 
 gulp.task('kirby:core:clear_tmp', function(cb){
-  del(coreTemp , cb);
+  return del(coreTemp );
 });
 
 /**
@@ -61,14 +62,15 @@ gulp.task('kirby:panel:download', function(){
 });
 
 gulp.task('kirby:panel:clear_public', function(cb){
-  del(config.panel.path, cb);
+  return del(config.panel.path);
 });
 
 gulp.task('kirby:panel:move', function(){
+  console.log('move panel');
   return gulp.src(panelTemp + '/panel-master/*')
     .pipe( gulp.dest( config.panel.path ) );
 });
 
 gulp.task('kirby:panel:clear_tmp', function(cb){
-  del(panelTemp, cb);
+  return del(panelTemp);
 });
