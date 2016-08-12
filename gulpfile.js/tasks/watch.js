@@ -1,17 +1,22 @@
 var gulp        = require('gulp');
-var config      = require('../config').watch;
-var livereload  = require('gulp-livereload');
+var config      = require('../config');
+var watch       = require('gulp-watch');
+
+var modernizrConfig = config.modernizr;
+var watchConfig     = config.watch;
 
 gulp.task('watch', function(){
-  livereload.listen();
+  watch( watchConfig.styles, function() {
+    gulp.start('styles');
+  });
 
-  gulp.watch( config.livereload ).on('change', livereload.changed);
+  watch( modernizrConfig.source, function () {
+    gulp.start('modernizr');
+  });
 
-  gulp.watch( config.styles, ['styles'] );
-  gulp.watch( config.javascript, ['lint','scripts'] );
-  gulp.watch( config.images, ['images'] );
+  watch( watchConfig.images, function() {
+    gulp.start('images');
+  });
 
-  // only run the bower task when something has changed, might become a costly operation otherwise
-  gulp.watch( config.vendor_javascript, ['wiredep'] );
-  gulp.watch( config.bower, ['wiredep'] );
+  watch( watchConfig.livereload, browserSync.reload);
 });

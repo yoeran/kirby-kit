@@ -1,7 +1,9 @@
 .DS_Store
-content/
+.htaccess
 thumbs/
 site/accounts/
+site/content/
 site/cache/
 license.md
 readme.md
+env.php

@@ -3,6 +3,7 @@
 //
 
 var gulp          = require('gulp');
+var plumber       = require('gulp-plumber');
 var config        = require('../config').styles;
 var autoprefixer  = require('gulp-autoprefixer');
 var minifyCSS     = require('gulp-minify-css');
@@ -16,10 +17,13 @@ function handleError(err) {
 
 gulp.task('styles', function () {
   return gulp.src( config.source )
+    .pipe ( plumber() )
+
     // normal version
     .pipe( sass() ).on('error', handleError)
     .pipe( autoprefixer( config.autoprefixer ) )
     .pipe( gulp.dest( config.dest ) )
+    .pipe( browserSync.stream() )
 
     // minified version
     .pipe( rename('main.min.css') )

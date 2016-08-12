@@ -1,4 +1,10 @@
-var gulp = require('gulp');
+var gulp        = require('gulp');
+var runSequence = require('run-sequence');
 
-gulp.task('build', ['lint','images','styles','scripts','modernizr']);
-gulp.task('default', ['build','watch','connect']);
+gulp.task('build', function(cb){
+  runSequence('styles', ['lint','webpack:once','images','modernizr'], cb);
+});
+
+gulp.task('default', function(cb){
+  runSequence('clean', 'build', ['watch','connect','webpack:watch'], cb);
+});

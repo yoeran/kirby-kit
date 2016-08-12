@@ -13,7 +13,8 @@ public/assets/scripts
 public/assets/styles
 public/assets/avatars
 
-gulpfile.js/config.js
+gulpfile.js/local.config.js
 source/vendor/modernizr.js
+typings
 
 tmp/

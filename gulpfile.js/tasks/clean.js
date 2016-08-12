@@ -3,6 +3,6 @@ var del       = require('del');
 var config    = require('../config').clean;
 
 /* Clean the public directory */
-gulp.task('clean', function (cb) {
-  del(config.all, cb);
+gulp.task('clean', function () {
+  return del(config.all);
 });
