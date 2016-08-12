@@ -6,7 +6,7 @@ var gulp          = require('gulp');
 var plumber       = require('gulp-plumber');
 var config        = require('../config').styles;
 var autoprefixer  = require('gulp-autoprefixer');
-var minifyCSS     = require('gulp-minify-css');
+var cleanCSS      = require('gulp-clean-css');
 var sass          = require('gulp-sass');
 var rename        = require('gulp-rename');
 
@@ -27,6 +27,6 @@ gulp.task('styles', function () {
 
     // minified version
     .pipe( rename('main.min.css') )
-    .pipe( minifyCSS() )
+    .pipe( cleanCSS() )
     .pipe( gulp.dest( config.dest ) );
 });
