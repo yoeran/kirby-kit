@@ -1,8 +1,8 @@
 .DS_Store
 .htaccess
 thumbs/
+content/
 site/accounts/
-site/content/
 site/cache/
 license.md
 readme.md
